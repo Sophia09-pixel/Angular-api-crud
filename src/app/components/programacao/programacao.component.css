@@ -1,61 +1,55 @@
-/* programacao.component.css */
 .programacao-container {
-  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #f8fafc;
+  padding: 24px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
 .programacao-titulo {
-  text-align: center;
   font-size: 2rem;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-align: center;
+  color: #222;
 }
 
 .programacao-subtitulo {
-  text-align: center;
-  color: #7f8c8d;
-  margin-bottom: 2rem;
   font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .eventos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
-/* Garante que os cards tenham altura consistente */
-app-evento-card {
-  display: block;
-  height: 100%;
-}
-
-/* Estilo para o botão Participar */
 .evento-botao {
-  width: 100%;
-  padding: 0.75rem;
+  padding: 10px 18px;
   border: none;
   border-radius: 6px;
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
+  transition: background-color 0.25s ease;
+  user-select: none;
 }
 
-.evento-botao:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+.evento-botao:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #999 !important;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .eventos-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+.mensagem-inscricao {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #2a7f2a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
 }
