@@ -1,0 +1,29 @@
+<section class="programacao-container">
+  <h2 class="programacao-titulo">Programação do Evento</h2>
+  <p class="programacao-subtitulo">Confira as principais palestras e workshops</p>
+
+  <div class="eventos-grid">
+    <app-evento-card
+      *ngFor="let evento of eventos"
+      [titulo]="evento.titulo"
+      [data]="evento.data"
+      [horario]="evento.horario"
+      [local]="evento.local"
+      [corDestaque]="evento.corDestaque"
+      [icone]="evento.icone">
+
+      <button class="evento-botao"
+              [style.backgroundColor]="evento.corDestaque"
+              (click)="participarEvento(evento)"
+              [disabled]="evento.inscrito">
+        {{ evento.inscrito ? 'Inscrito' : 'Participar' }}
+      </button>
+
+      <div *ngIf="evento.inscrito" class="mensagem-inscricao">
+        ✅ Você se inscreveu no evento: <strong>{{evento.titulo}}</strong>
+      </div>
+    </app-evento-card>
+    <br>
+    <br>
+  </div>
+</section>

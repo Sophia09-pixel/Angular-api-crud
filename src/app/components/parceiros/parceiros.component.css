@@ -1,0 +1,41 @@
+/* parceiros.component.css */
+.parceiros-section {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.parceiros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.parceiro-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.parceiro-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.parceiro-descricao {
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+}

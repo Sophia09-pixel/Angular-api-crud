@@ -1,0 +1,124 @@
+/* Estilos base */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #2c3e50;
+}
+
+/* Seção hero */
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-principal {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #1a237e;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.descricao {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  color: #37474f;
+}
+
+.data-evento {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #1a237e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Seção destaques */
+.destaques-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destaques-titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a237e;
+  position: relative;
+}
+
+.destaques-titulo::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF5100, #FF9F1C);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.destaques-lista {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.destaque-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destaque-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  color: #4CAF50;
+  flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 2rem;
+  }
+
+  .descricao {
+    font-size: 1.1rem;
+  }
+
+  .destaques-lista {
+    grid-template-columns: 1fr;
+  }
+}

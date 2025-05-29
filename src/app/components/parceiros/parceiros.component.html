@@ -1,0 +1,20 @@
+<!-- parceiros.component.html -->
+<section class="parceiros-section" aria-labelledby="parceiros-heading">
+  <h2 id="parceiros-heading" class="section-title">Nossos Parceiros</h2>
+
+  <div class="parceiros-grid">
+    <div class="parceiro-card">
+      <img
+        [src]="logoIBM"
+        [alt]="'Logo da IBM - ' + descricaoIBM"
+        class="parceiro-logo"
+        loading="lazy"
+        width="200"
+        height="100"
+      >
+      <p class="parceiro-descricao">{{ descricaoIBM }}</p>
+    </div>
+
+    <!-- Adicione mais parceiros individualmente se necessário -->
+  </div>
+</section>
